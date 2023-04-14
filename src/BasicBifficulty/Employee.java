@@ -4,13 +4,13 @@ public class Employee {
     private String fio;
     private int salary;
     private int department;
-    static int id;
+    private static int id;
 
     public Employee(String fio, int salary, int department) {
         this.fio = fio;
         this.salary = salary;
         this.department = department;
-        id++;
+        id ++;
     }
 
     public String getFio() {
@@ -39,5 +39,9 @@ public class Employee {
 
     public String toString() {
         return "Ф.И.О:" + fio + " Отдел:" + department + " ЗП:" + salary;
+    }
+
+    public int getId() {
+        return id;
     }
 }
