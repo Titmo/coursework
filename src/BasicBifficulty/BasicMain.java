@@ -37,9 +37,6 @@ public class BasicMain {
 
     }
 
-    public static int id() {
-        return 1;
-    }
     public static void listEmployee(Employee[] staff) {
         for (int i = 0; i <staff[0].getCounter(); i++) {
             System.out.println(staff[i].toString());
