@@ -3,7 +3,6 @@ package BasicBifficulty;
 public class BasicMain {
     public static void main(String[] args) {
         EmployeeBook employeeBook = new EmployeeBook();
-        System.out.println(employeeBook.toString(8));
         employeeBook.listEmployee();
         System.out.println("Сумма затрат на зарплаты в месяц:"+employeeBook.salaryCosts());
         System.out.println("Минимальная зарплата:"+employeeBook.minimumSalary());
@@ -13,7 +12,7 @@ public class BasicMain {
         //Повышенная сложность
         employeeBook.indexSalary();
         for (int i = 0; i <employeeBook.getStaff()[0].getCounter(); i++) {
-            if (employeeBook.toString(i) != null) {
+            if (employeeBook.staff(i) != null) {
                 System.out.println("Увелечение ЗП на 10%:" + employeeBook.getStaff()[i].getSalary());
             }
         }
@@ -25,9 +24,17 @@ public class BasicMain {
         employeeBook.salaryLess(100_000);
         System.out.println();
         employeeBook.salaryMore(100_000);
-
-
-
+        System.out.println();
+        employeeBook.deleteByFIO("Кузнецов П. С.");
+        employeeBook.listEmployee();
+        System.out.println();
+        employeeBook.creatureByFIO("Киреев Д.Л.", 135_845, 2);
+        employeeBook.listEmployee();
+        System.out.println();
+        employeeBook.changeAnEmployee("Киреев Д.Л.", 123_456, 3);
+        employeeBook.listEmployee();
+        System.out.println();
+        employeeBook.employeesByDepartment();
     }
 }
 
