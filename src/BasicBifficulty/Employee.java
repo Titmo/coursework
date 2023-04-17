@@ -4,13 +4,16 @@ public class Employee {
     private String fio;
     private int salary;
     private int department;
-    private static int id;
+    private static int counter=0;
+    private final int id;
+
 
     public Employee(String fio, int salary, int department) {
         this.fio = fio;
         this.salary = salary;
         this.department = department;
-        id ++;
+        counter++;
+        this.id = getCounter();
     }
 
     public String getFio() {
@@ -25,8 +28,8 @@ public class Employee {
         return department;
     }
 
-    public void setFio(String fio) {
-        this.fio = fio;
+    public int getCounter() {
+        return counter;
     }
 
     public void setSalary(int salary) {
