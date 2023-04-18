@@ -28,9 +28,14 @@ public class BasicMain {
         employeeBook.deleteByFIO("Кузнецов П. С.");
         employeeBook.listEmployee();
         System.out.println();
-        employeeBook.creatureByFIO("Киреев Д.Л.", 135_845, 2);
+        employeeBook.deleteById(2);
         employeeBook.listEmployee();
         System.out.println();
+        employeeBook.creatureByFIO("Киреев Д.Л.", 135_845, 2);
+        employeeBook.creatureByFIO("Кукушкин Ф.М.", 155_451, 5);
+        employeeBook.listEmployee();
+        System.out.println();
+        employeeBook.changeAnEmployee("Киреев Д.Л.", 123_456, 3);
         employeeBook.changeAnEmployee("Киреев Д.Л.", 123_456, 3);
         employeeBook.listEmployee();
         System.out.println();

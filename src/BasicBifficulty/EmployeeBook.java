@@ -214,6 +214,15 @@ public class EmployeeBook {
             }
         }
     }
+    public void deleteById(int id) {
+        for (int i = 0; i < staff.length ; i++) {
+            if (staff(i) != null) {
+                if (staff[i].getId()==id) {
+                    staff[i]=null;
+                }
+            }
+        }
+    }
 
     public void changeAnEmployee(String fio, int salary, int department) {
         int count=0;

@@ -1,7 +1,7 @@
 package BasicBifficulty;
 
 public class Employee {
-    private String fio;
+    private final String fio;
     private int salary;
     private int department;
     private static int counter=0;
